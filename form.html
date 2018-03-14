@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="jump"></p>
+<form>
+FirstName<input type="text" name="fname" id="fname" >
+LastName<input type="text" name="lname" id="lname" >
+Email<input type="email" name="email" id="email" >
+<input type="button" value="Submit" onclick="myFunction()">
+</form>
+
+<script type="text/javascript">
+
+function myFunction(){
+    alert("Please Enter Form");
+    var first_name = document.getElementById('fname').value;
+    var last_name = document.getElementById('lname').value;
+    var email= document.getElementById('email').value;
+    var full_name = first_name + last_name + email;
+    document.getElementById("jump").innerHTML = full_name;
+    
+}
+    </script>
+    </body>
+    </html>
+    
