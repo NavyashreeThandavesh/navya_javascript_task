@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="jump"></p>
-<form>
-FirstName<input type="text" name="fname" id="fname" >
-LastName<input type="text" name="lname" id="lname" >
-Email<input type="email" name="email" id="email" >
-<input type="button" value="Submit" onclick="myFunction()">
-</form>
+<div id="first">
+
+<h3>FastName</h3><span id="form1"></span>
+<h3>LastName</h3><span id="form2"></span>
+<h3>Email</h3><span id="form3"></span>
+<h3>Address</h3><span id="form4"></span>
+</div>
+<div id="second">
+
+FirstName<input type="text" name="fname" id="fname" placeholder="firstname">
+LastName<input type="text" name="lname" id="lname" placeholder="lastname">
+Email<input type="email" name="email" id="email" placeholder="email">
+Address<input type="text" name="add" id="add" placeholder="add">
+<button type="button" value="Submit" onclick="myFunction()">Submit</button>
+
+</div>
 
 <script type="text/javascript">
-
+document.getElementById("first").style.display = "none";
 function myFunction(){
-    alert("Please Enter Form");
+    
     var first_name = document.getElementById('fname').value;
     var last_name = document.getElementById('lname').value;
     var email= document.getElementById('email').value;
-    var full_name = first_name + last_name + email;
-    document.getElementById("jump").innerHTML = full_name;
+    var add=document.getElementById('add').value
+    if(first_name == "" || last_name == "" || email == "" || add == "")
+   {
+    alert("Please Enter Form");
+   }
+   else
+    document.getElementById("form1").innerHTML = first_name;
+    document.getElementById("form2").innerHTML = last_name;
+    document.getElementById("form3").innerHTML = email;
+    document.getElementById("form4").innerHTML = add;
+    document.getElementById("first").style.display = "block";
+    document.getElementById("second").style.display = "none";
+
     
 }
     </script>

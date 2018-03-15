@@ -2,18 +2,39 @@
 <html>
 <body>
 
- <h1 onclick="toggle_visibility('foo');">Red</h1>
-<script type="text/javascript">
+<h1 id="red1" onclick="color()">Red</h1>
+<h1 id="blue1" onclick="color1()">Blue</h1>
+<h1 id="green1" onclick="color2()">Green</h1>
 
-    function toggle_visibility(id) {
-       var e = document.getElementById(id);
+<script>
 
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-      document.getElementById("").style.backgroundcolor = "red";
-    }
+function color(){
+	if(document.getElementById("red1").style.backgroundColor == "red"){
+		document.getElementById("red1").style.backgroundColor = "white";
+	} else {
+		document.getElementById("red1").style.backgroundColor = "red";
+	}
+
+}
+function color1(){
+	if(document.getElementById("blue1").style.backgroundColor == "blue"){
+		document.getElementById("blue1").style.backgroundColor = "white";
+	} else {
+		document.getElementById("blue1").style.backgroundColor = "blue";
+	}
+
+}
+function color2(){
+	if(document.getElementById("green1").style.backgroundColor == "green"){
+		document.getElementById("green1").style.backgroundColor = "white";
+	} else {
+		document.getElementById("green1").style.backgroundColor = "green";
+	}
+
+
+}
+
+
 
 </script>
 
